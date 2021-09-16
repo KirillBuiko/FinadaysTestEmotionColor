@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QMainWindow" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1073</width>
+    <height>636</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Приветствие</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow
+{
+background: url(./res/start.png);
+background-repeat: no-repeat;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="nextButton">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>570</y>
+      <width>181</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Bahnschrift SemiBold</family>
+      <pointsize>20</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+background-color: rgb(0, 0, 255);
+color: rgb(255, 255, 255);
+}
+
+QPushButton::hover
+{
+background-color : rgb(255, 0, 0);
+}</string>
+    </property>
+    <property name="text">
+     <string>ДАЛЕЕ</string>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="helpText">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>140</y>
+      <width>451</width>
+      <height>411</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Bahnschrift</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+    <property name="plainText">
+     <string>Приветствуем Вас в демо-версии программы анализа эмоционального окраса текстовых сообщений.
+В данной версии у Вас есть возможность проанализировать сообщение, введенное самостоятельно, или же загрузить файл* с набором сообщений для анализа.
+После анализа сообщение будет получениа слудующая информация:
+• Рекомендации для оператора, как стоит поступить после получения последнего сообщения;
+• Процентное соотношение каждого из эмоциональных окрасов сообщения (позитивное, нейтральное, негативное).
+
+*файл должен представлять формат, подобный тому, что был предоставлен для тестов</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
