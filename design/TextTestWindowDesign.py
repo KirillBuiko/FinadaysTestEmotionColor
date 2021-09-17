@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'D:\Desktop\test_pyqt\proga\design\TextTestWindowDesign.ui'
+# Form implementation generated from reading ui file 'D:\Desktop\test_pyqt\proga\FinadaysTestEmotionColor\design\TextTestWindowDesign.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.4
 #
@@ -32,7 +32,7 @@ class Ui_Form(object):
         self.centralwidget = QtWidgets.QWidget(Form)
         self.centralwidget.setObjectName("centralwidget")
         self.pushButton = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton.setGeometry(QtCore.QRect(70, 340, 581, 51))
+        self.pushButton.setGeometry(QtCore.QRect(70, 340, 961, 51))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(20)
@@ -40,7 +40,7 @@ class Ui_Form(object):
         font.setWeight(75)
         self.pushButton.setFont(font)
         self.pushButton.setStyleSheet("QPushButton{\n"
-"background-color: rgb(0, 0, 255);\n"
+"background-color: rgba(0, 0, 255, 180);\n"
 "color: rgb(255, 255, 255);\n"
 "}\n"
 "\n"
@@ -50,7 +50,7 @@ class Ui_Form(object):
 "}")
         self.pushButton.setObjectName("pushButton")
         self.uploadFileButton = QtWidgets.QPushButton(self.centralwidget)
-        self.uploadFileButton.setGeometry(QtCore.QRect(70, 540, 461, 51))
+        self.uploadFileButton.setGeometry(QtCore.QRect(70, 540, 961, 51))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(20)
@@ -58,7 +58,7 @@ class Ui_Form(object):
         font.setWeight(75)
         self.uploadFileButton.setFont(font)
         self.uploadFileButton.setStyleSheet("QPushButton{\n"
-"background-color: rgb(0, 0, 255);\n"
+"background-color: rgba(0, 0, 255, 180);\n"
 "color: rgb(255, 255, 255);\n"
 "}\n"
 "\n"
@@ -67,27 +67,29 @@ class Ui_Form(object):
 "background-color : rgb(255, 0, 0);\n"
 "}")
         self.uploadFileButton.setObjectName("uploadFileButton")
-        self.plainTextEdit = QtWidgets.QPlainTextEdit(self.centralwidget)
-        self.plainTextEdit.setGeometry(QtCore.QRect(70, 160, 731, 161))
+        self.messageText = QtWidgets.QPlainTextEdit(self.centralwidget)
+        self.messageText.setGeometry(QtCore.QRect(70, 160, 961, 161))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
-        self.plainTextEdit.setFont(font)
-        self.plainTextEdit.setObjectName("plainTextEdit")
-        self.plainTextEdit_2 = QtWidgets.QPlainTextEdit(self.centralwidget)
-        self.plainTextEdit_2.setGeometry(QtCore.QRect(70, 410, 581, 111))
+        self.messageText.setFont(font)
+        self.messageText.setStyleSheet("background-color: rgba(255, 255, 255, 150);")
+        self.messageText.setObjectName("messageText")
+        self.answerText = QtWidgets.QPlainTextEdit(self.centralwidget)
+        self.answerText.setGeometry(QtCore.QRect(70, 410, 961, 111))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
-        self.plainTextEdit_2.setFont(font)
-        self.plainTextEdit_2.setReadOnly(True)
-        self.plainTextEdit_2.setObjectName("plainTextEdit_2")
+        self.answerText.setFont(font)
+        self.answerText.setStyleSheet("background-color: rgba(255, 255, 255, 150);")
+        self.answerText.setReadOnly(True)
+        self.answerText.setObjectName("answerText")
         self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(70, 110, 291, 31))
+        self.label.setGeometry(QtCore.QRect(70, 90, 291, 31))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(16)
@@ -95,6 +97,19 @@ class Ui_Form(object):
         font.setWeight(75)
         self.label.setFont(font)
         self.label.setObjectName("label")
+        self.checkBox = QtWidgets.QCheckBox(self.centralwidget)
+        self.checkBox.setGeometry(QtCore.QRect(70, 130, 311, 20))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.checkBox.setFont(font)
+        self.checkBox.setObjectName("checkBox")
+        self.errorLabel = QtWidgets.QLabel(self.centralwidget)
+        self.errorLabel.setGeometry(QtCore.QRect(440, 120, 361, 41))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.errorLabel.setFont(font)
+        self.errorLabel.setStyleSheet("color: rgb(255,0,0)")
+        self.errorLabel.setObjectName("errorLabel")
         Form.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(Form)
@@ -105,4 +120,6 @@ class Ui_Form(object):
         Form.setWindowTitle(_translate("Form", "Тестирование по комментарию"))
         self.pushButton.setText(_translate("Form", "ОТПРАВИТЬ"))
         self.uploadFileButton.setText(_translate("Form", "ЗАГРУЗИТЬ ФАЙЛ"))
-        self.label.setText(_translate("Form", "Введите комментарий:"))
+        self.label.setText(_translate("Form", "Введите сообщение:"))
+        self.checkBox.setText(_translate("Form", "Учитывать предыдущее сообщение"))
+        self.errorLabel.setText(_translate("Form", "Введите текст в поле ниже"))

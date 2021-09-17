@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'D:\Desktop\test_pyqt\proga\design\StartHelpWindowDesign.ui'
+# Form implementation generated from reading ui file 'D:\Desktop\test_pyqt\proga\FinadaysTestEmotionColor\design\StartHelpWindowDesign.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.4
 #
@@ -45,7 +45,7 @@ class Ui_Form(object):
         self.helpText.setGeometry(QtCore.QRect(40, 140, 451, 411))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift")
-        font.setPointSize(11)
+        font.setPointSize(10)
         self.helpText.setFont(font)
         self.helpText.setReadOnly(True)
         self.helpText.setObjectName("helpText")
@@ -59,9 +59,9 @@ class Ui_Form(object):
         Form.setWindowTitle(_translate("Form", "Приветствие"))
         self.nextButton.setText(_translate("Form", "ДАЛЕЕ"))
         self.helpText.setPlainText(_translate("Form", "Приветствуем Вас в демо-версии программы анализа эмоционального окраса текстовых сообщений.\n"
-"В данной версии у Вас есть возможность проанализировать сообщение, введенное самостоятельно, или же загрузить файл* с набором сообщений для анализа.\n"
-"После анализа сообщение будет получениа слудующая информация:\n"
+"В данной версии у Вас есть возможность проанализировать сообщение, введенное самостоятельно, или же загрузить файл* с набором сообщений для анализа. Также в связи с особенностями разработки в данной версии для работы необходимо подключение к интернету. \n"
+"После анализа сообщения будет получена слудующая информация:\n"
 "• Рекомендации для оператора, как стоит поступить после получения последнего сообщения;\n"
 "• Процентное соотношение каждого из эмоциональных окрасов сообщения (позитивное, нейтральное, негативное).\n"
 "\n"
-"*файл должен представлять формат, подобный тому, что был предоставлен для тестов"))
+"*файл должен быть в формате .csv с подобной структурой, что была представлена в файлах для тестов"))

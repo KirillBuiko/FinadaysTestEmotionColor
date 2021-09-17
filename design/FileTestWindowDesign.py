@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'D:\Desktop\test_pyqt\proga\design\FileTestWindowDesign.ui'
+# Form implementation generated from reading ui file 'D:\Desktop\test_pyqt\proga\FinadaysTestEmotionColor\design\FileTestWindowDesign.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.4
 #
@@ -15,9 +15,10 @@ class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
         Form.setWindowModality(QtCore.Qt.NonModal)
-        Form.resize(1075, 632)
+        Form.resize(1081, 646)
         Form.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
         Form.setWindowOpacity(1.0)
+        Form.setLayoutDirection(QtCore.Qt.LeftToRight)
         Form.setAutoFillBackground(False)
         Form.setStyleSheet("QDialog\n"
 "{\n"
@@ -27,12 +28,38 @@ class Ui_Form(object):
         Form.setProperty("animated", True)
         Form.setProperty("documentMode", False)
         Form.setProperty("unifiedTitleAndToolBarOnMac", False)
-        self.centralwidget = QtWidgets.QWidget(Form)
-        self.centralwidget.setGeometry(QtCore.QRect(0, 0, 1071, 631))
-        self.centralwidget.setObjectName("centralwidget")
-        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
+        self.label = QtWidgets.QLabel(Form)
+        self.label.setGeometry(QtCore.QRect(390, 20, 481, 61))
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(26)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label.setFont(font)
+        self.label.setObjectName("label")
+        self.instructionText = QtWidgets.QPlainTextEdit(Form)
+        self.instructionText.setGeometry(QtCore.QRect(20, 130, 631, 241))
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(9)
+        font.setBold(True)
+        font.setWeight(75)
+        self.instructionText.setFont(font)
+        self.instructionText.setStyleSheet("background-color: rgba(255, 255, 255, 180);\n"
+"color: rgb(0, 0, 0);\n"
+"")
+        self.instructionText.setReadOnly(True)
+        self.instructionText.setTextInteractionFlags(QtCore.Qt.NoTextInteraction)
+        self.instructionText.setObjectName("instructionText")
+        self.dropFilePic = QtWidgets.QLabel(Form)
+        self.dropFilePic.setGeometry(QtCore.QRect(1050, 20, 1071, 631))
+        self.dropFilePic.setStyleSheet("")
+        self.dropFilePic.setText("")
+        self.dropFilePic.setPixmap(QtGui.QPixmap("D:\\Desktop\\test_pyqt\\proga\\FinadaysTestEmotionColor\\design\\../res/drop-file.png"))
+        self.dropFilePic.setObjectName("dropFilePic")
+        self.pushButton = QtWidgets.QPushButton(Form)
         self.pushButton.setEnabled(True)
-        self.pushButton.setGeometry(QtCore.QRect(30, 300, 271, 51))
+        self.pushButton.setGeometry(QtCore.QRect(670, 300, 371, 51))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(20)
@@ -40,48 +67,17 @@ class Ui_Form(object):
         font.setWeight(75)
         self.pushButton.setFont(font)
         self.pushButton.setStyleSheet("QPushButton{\n"
-"background-color: rgb(0, 0, 255);\n"
+"background-color: rgba(0, 0, 255, 180);\n"
 "color: rgb(255, 255, 255);\n"
 "}\n"
 "\n"
 "QPushButton::hover\n"
 "{\n"
-"background-color : rgb(255, 0, 0);\n"
+"background-color : rgba(255, 0, 0, 180);\n"
 "}")
         self.pushButton.setObjectName("pushButton")
-        self.downloadResultButton = QtWidgets.QPushButton(self.centralwidget)
-        self.downloadResultButton.setGeometry(QtCore.QRect(500, 570, 551, 51))
-        font = QtGui.QFont()
-        font.setFamily("Bahnschrift SemiBold")
-        font.setPointSize(20)
-        font.setBold(True)
-        font.setWeight(75)
-        self.downloadResultButton.setFont(font)
-        self.downloadResultButton.setStyleSheet("QPushButton{\n"
-"background-color: rgb(0, 0, 255);\n"
-"color: rgb(255, 255, 255);\n"
-"}\n"
-"\n"
-"QPushButton::hover\n"
-"{\n"
-"background-color : rgb(255, 0, 0);\n"
-"}")
-        self.downloadResultButton.setObjectName("downloadResultButton")
-        self.instructionText = QtWidgets.QPlainTextEdit(self.centralwidget)
-        self.instructionText.setGeometry(QtCore.QRect(30, 120, 1021, 161))
-        font = QtGui.QFont()
-        font.setFamily("Bahnschrift SemiBold")
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.instructionText.setFont(font)
-        self.instructionText.setStyleSheet("QMainWindow{\n"
-"background-image: url(../res/file.png);\n"
-"}")
-        self.instructionText.setReadOnly(True)
-        self.instructionText.setObjectName("instructionText")
-        self.attachFileButton = QtWidgets.QPushButton(self.centralwidget)
-        self.attachFileButton.setGeometry(QtCore.QRect(330, 300, 281, 51))
+        self.attachFileButton = QtWidgets.QPushButton(Form)
+        self.attachFileButton.setGeometry(QtCore.QRect(670, 150, 371, 51))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(20)
@@ -89,17 +85,17 @@ class Ui_Form(object):
         font.setWeight(75)
         self.attachFileButton.setFont(font)
         self.attachFileButton.setStyleSheet("QPushButton{\n"
-"background-color: rgb(0, 0, 255);\n"
+"background-color: rgba(0, 0, 255, 180);\n"
 "color: rgb(255, 255, 255);\n"
 "}\n"
 "\n"
 "QPushButton::hover\n"
 "{\n"
-"background-color : rgb(255, 0, 0);\n"
+"background-color : rgba(255, 0, 0, 180);\n"
 "}")
         self.attachFileButton.setObjectName("attachFileButton")
-        self.fileNameLabel = QtWidgets.QPlainTextEdit(self.centralwidget)
-        self.fileNameLabel.setGeometry(QtCore.QRect(640, 300, 411, 51))
+        self.fileNameLabel = QtWidgets.QPlainTextEdit(Form)
+        self.fileNameLabel.setGeometry(QtCore.QRect(670, 210, 371, 51))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift")
         font.setPointSize(18)
@@ -107,7 +103,7 @@ class Ui_Form(object):
         font.setItalic(True)
         font.setWeight(50)
         self.fileNameLabel.setFont(font)
-        self.fileNameLabel.setStyleSheet("background-color: rgb(195, 195, 195);\n"
+        self.fileNameLabel.setStyleSheet("background-color: rgba(195, 195, 195, 180);\n"
 "color: rgb(255, 255, 255);\n"
 "")
         self.fileNameLabel.setLineWrapMode(QtWidgets.QPlainTextEdit.WidgetWidth)
@@ -116,34 +112,48 @@ class Ui_Form(object):
         self.fileNameLabel.setTextInteractionFlags(QtCore.Qt.NoTextInteraction)
         self.fileNameLabel.setBackgroundVisible(False)
         self.fileNameLabel.setObjectName("fileNameLabel")
-        self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(400, 10, 481, 61))
-        font = QtGui.QFont()
-        font.setFamily("Bahnschrift SemiBold")
-        font.setPointSize(26)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label.setFont(font)
-        self.label.setObjectName("label")
-        self.progressBar = QtWidgets.QProgressBar(self.centralwidget)
-        self.progressBar.setGeometry(QtCore.QRect(30, 370, 1021, 23))
+        self.progressBar = QtWidgets.QProgressBar(Form)
+        self.progressBar.setGeometry(QtCore.QRect(20, 390, 1021, 23))
         self.progressBar.setProperty("value", 24)
         self.progressBar.setTextVisible(True)
         self.progressBar.setInvertedAppearance(False)
         self.progressBar.setObjectName("progressBar")
-        self.resultTable = QtWidgets.QTableView(self.centralwidget)
-        self.resultTable.setGeometry(QtCore.QRect(30, 420, 1021, 131))
+        self.resultTable = QtWidgets.QTableView(Form)
+        self.resultTable.setGeometry(QtCore.QRect(20, 430, 1021, 131))
+        self.resultTable.setStyleSheet("background-color: rgba(255, 255, 255, 180);\n"
+"color: rgb(0, 0, 0);\n"
+"")
         self.resultTable.setAlternatingRowColors(False)
+        self.resultTable.setWordWrap(False)
         self.resultTable.setObjectName("resultTable")
         self.resultTable.verticalHeader().setDefaultSectionSize(37)
-        self.dropFilePic = QtWidgets.QLabel(self.centralwidget)
-        self.dropFilePic.setGeometry(QtCore.QRect(0, 0, 1071, 631))
-        self.dropFilePic.setStyleSheet("QDialog{\n"
-"background-image: url(../res/file.png);\n"
+        self.downloadResultButton = QtWidgets.QPushButton(Form)
+        self.downloadResultButton.setGeometry(QtCore.QRect(490, 570, 551, 51))
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setWeight(75)
+        self.downloadResultButton.setFont(font)
+        self.downloadResultButton.setStyleSheet("QPushButton{\n"
+"background-color: rgba(0, 0, 255, 180);\n"
+"color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"QPushButton::hover\n"
+"{\n"
+"background-color : rgba(255, 0, 0, 180);\n"
 "}")
-        self.dropFilePic.setText("")
-        self.dropFilePic.setPixmap(QtGui.QPixmap("D:\\Desktop\\test_pyqt\\proga\\design\\../res/drop-file.png"))
-        self.dropFilePic.setObjectName("dropFilePic")
+        self.downloadResultButton.setObjectName("downloadResultButton")
+        self.label.raise_()
+        self.instructionText.raise_()
+        self.pushButton.raise_()
+        self.attachFileButton.raise_()
+        self.fileNameLabel.raise_()
+        self.progressBar.raise_()
+        self.resultTable.raise_()
+        self.downloadResultButton.raise_()
+        self.dropFilePic.raise_()
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -151,9 +161,17 @@ class Ui_Form(object):
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Тестирование по файлу"))
-        self.pushButton.setText(_translate("Form", "ОТПРАВИТЬ"))
-        self.downloadResultButton.setText(_translate("Form", "СКАЧАТЬ ФАЙЛ С РЕЗУЛЬТАТАМИ"))
-        self.instructionText.setPlainText(_translate("Form", "Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  Text  "))
-        self.attachFileButton.setText(_translate("Form", "ПРИКРЕПИТЬ"))
         self.label.setText(_translate("Form", "Тестирование по файлу"))
+        self.instructionText.setPlainText(_translate("Form", "Вы находитесь в окне для тестирования алгоритма на файле-таблице с сообщениями!\n"
+"Файл должен быть следующего формата:\n"
+"• В формате csv\n"
+"• Иметь поля Data, Sender, Message\n"
+"• Пример строки:  8/23/21 7:54,CLIENT,\"Здравствуйте!\"\n"
+"• Обрабатываться будут поля Message в строке с Sender, равным CLIENT\n"
+"\n"
+"Файл, подходящий по требованиям, можно прикрепить с помощью кнопки \"Прикрепить\" или перенести в это окно\n"
+"После отправки Вы сможете сохранить себе файл с дополнительными полями, характеризующими окрас сообщений"))
+        self.pushButton.setText(_translate("Form", "ОТПРАВИТЬ"))
+        self.attachFileButton.setText(_translate("Form", "ПРИКРЕПИТЬ"))
         self.progressBar.setFormat(_translate("Form", "%p% обработано"))
+        self.downloadResultButton.setText(_translate("Form", "СКАЧАТЬ ФАЙЛ С РЕЗУЛЬТАТАМИ"))

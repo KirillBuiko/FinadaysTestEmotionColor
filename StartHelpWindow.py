@@ -4,6 +4,13 @@ import time
 import threading
 import design.StartHelpWindowDesign as design
 import TextTestWindow as texttestform
+
+from analizer.modelClient import SentenceAnalizer
+import nltk
+try:
+    import translators as ts
+except:
+    ts = 0
 from PyQt5 import QtGui, QtWidgets, QtCore
 
 
@@ -11,6 +18,8 @@ class Form(design.Ui_Form, QtWidgets.QMainWindow):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
+        path = "analizer/modelpipeline_ru.pkl"
+        self.model = SentenceAnalizer(path)
         pic = QtGui.QImage('./res/start.png')
         self.setFixedSize(pic.width() , pic.height())
         self.setWindowIcon(QtGui.QIcon('./res/icon.ico'))
@@ -28,6 +37,8 @@ class Form(design.Ui_Form, QtWidgets.QMainWindow):
         
     def changeForm(self, form):
         self.window = form()
+        self.window.model = self.model
+        self.window.ts = ts
         self.window.setWindowOpacity(0)
         self.window.show()
         self.animation1 = QtCore.QPropertyAnimation(self, b'windowOpacity')

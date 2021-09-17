@@ -53,7 +53,7 @@ background-repeat: no-repeat;
      <rect>
       <x>70</x>
       <y>340</y>
-      <width>581</width>
+      <width>961</width>
       <height>51</height>
      </rect>
     </property>
@@ -67,7 +67,7 @@ background-repeat: no-repeat;
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton{
-background-color: rgb(0, 0, 255);
+background-color: rgba(0, 0, 255, 180);
 color: rgb(255, 255, 255);
 }
 
@@ -85,7 +85,7 @@ background-color : rgb(255, 0, 0);
      <rect>
       <x>70</x>
       <y>540</y>
-      <width>461</width>
+      <width>961</width>
       <height>51</height>
      </rect>
     </property>
@@ -99,7 +99,7 @@ background-color : rgb(255, 0, 0);
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton{
-background-color: rgb(0, 0, 255);
+background-color: rgba(0, 0, 255, 180);
 color: rgb(255, 255, 255);
 }
 
@@ -112,12 +112,12 @@ background-color : rgb(255, 0, 0);
      <string>ЗАГРУЗИТЬ ФАЙЛ</string>
     </property>
    </widget>
-   <widget class="QPlainTextEdit" name="plainTextEdit">
+   <widget class="QPlainTextEdit" name="messageText">
     <property name="geometry">
      <rect>
       <x>70</x>
       <y>160</y>
-      <width>731</width>
+      <width>961</width>
       <height>161</height>
      </rect>
     </property>
@@ -129,13 +129,16 @@ background-color : rgb(255, 0, 0);
       <bold>true</bold>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255, 255, 255, 150);</string>
+    </property>
    </widget>
-   <widget class="QPlainTextEdit" name="plainTextEdit_2">
+   <widget class="QPlainTextEdit" name="answerText">
     <property name="geometry">
      <rect>
       <x>70</x>
       <y>410</y>
-      <width>581</width>
+      <width>961</width>
       <height>111</height>
      </rect>
     </property>
@@ -147,6 +150,9 @@ background-color : rgb(255, 0, 0);
       <bold>true</bold>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255, 255, 255, 150);</string>
+    </property>
     <property name="readOnly">
      <bool>true</bool>
     </property>
@@ -155,7 +161,7 @@ background-color : rgb(255, 0, 0);
     <property name="geometry">
      <rect>
       <x>70</x>
-      <y>110</y>
+      <y>90</y>
       <width>291</width>
       <height>31</height>
      </rect>
@@ -169,7 +175,46 @@ background-color : rgb(255, 0, 0);
      </font>
     </property>
     <property name="text">
-     <string>Введите комментарий:</string>
+     <string>Введите сообщение:</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>130</y>
+      <width>311</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Учитывать предыдущее сообщение</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="errorLabel">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>120</y>
+      <width>361</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255,0,0)</string>
+    </property>
+    <property name="text">
+     <string>Введите текст в поле ниже</string>
     </property>
    </widget>
   </widget>
